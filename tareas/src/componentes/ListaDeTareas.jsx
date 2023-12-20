@@ -27,7 +27,7 @@ function ListaDeTareas() {
       const tareasActualizadas = [tarea, ...tareas];
       setTareas(tareasActualizadas);
     }
-  }
+  };
 
   /* Lo que hace esta función es básicamente filtrar las tareas, se va a excluir de la lista 
   de tareas la tarea que contenga el id proporcionado (crea un nuevo arreglo que contiene todas las tareas excepto la que tiene el id específico.), 
@@ -37,7 +37,7 @@ function ListaDeTareas() {
   const eliminarTarea = id => {
     const tareasActualizadas = tareas.filter(tarea => tarea.id !== id);
     setTareas(tareasActualizadas);
-  }
+  };
 
   /* Se cambia el valor de la tarea  si el id de la tarea es el de la tarea seleccionada.
   Importante tener en cuenta que el va buscando id por id, ya que el arreglo se recorre
@@ -54,7 +54,7 @@ function ListaDeTareas() {
       return tarea;
     });
     setTareas(tareasActualizadas);
-  }
+  };
 
   return (
     <>

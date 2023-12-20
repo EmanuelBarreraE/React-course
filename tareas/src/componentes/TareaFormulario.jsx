@@ -12,23 +12,24 @@ function TareaFormulario(props) {
   const manejarCambio = evento => {
     /* Se usa la función setInput ya definida anteriormente
     y se le pasan unos parametros los cuales me permiten extraer el valor del input
-    es decir, lo que se encuentra escrito */
+    es decir, lo que se encuentra escrito (ese es el evento que se obtiene) */
     setInput(evento.target.value);
-  }
+  };
 
   /* Esta funcion manejarEnvio se va a llamar cuando se intente enviar el formulario
-  mediante el boton de Agregar Tarea */
+  mediante el boton de Agregar Tarea (el evento que se obtiene es una accion de submit) */
   const manejarEnvio = evento => {
     evento.preventDefault();
 
+    /* Se define el objeto para la tarea nueva */
     const tareaNueva = {
       id: uuidv4(),
       texto: input,
       completada: false 
-    }
+    };
 
     props.onSubmit(tareaNueva);
-  }
+  };
 
 
   return(
